@@ -1,4 +1,4 @@
-RamenRater App
+Oscar-RamenRater
 
 ---
 
@@ -76,4 +76,4 @@ Copyright: © 2025 Oscar Maingi. All rights reserved.
 ---
 
 Link to Live Site (GitHub Pages)  
-The project is hosted on GitHub Pages. You can access the live site at:
+The project is hosted on GitHub Pages. You can access the live site at: https://techtinke.github.io/Oscar-RamenRater/
