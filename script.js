@@ -77,11 +77,20 @@ const ramens = [
   },
 ];
 function loadRamens() {
-ramenContainer.innerHTML = "";
-ramens.forEach((ramen) => {
-  const ramenItem = document.createElement("div");
-  ramenItem.classList.add("ramen-item");
-  ramenItem.innerHTML = `<img src="${ramen.image}" alt="${ramen.name}"><p>${ramen.name}</p>`;
-  ramenItem.addEventListener("click", () => selectRamen(ramen));
-  ramenContainer.appendChild(ramenItem);
-});
+  ramenContainer.innerHTML = "";
+  ramens.forEach((ramen) => {
+    const ramenItem = document.createElement("div");
+    ramenItem.classList.add("ramen-item");
+    ramenItem.innerHTML = `<img src="${ramen.image}" alt="${ramen.name}"><p>${ramen.name}</p>`;
+    ramenItem.addEventListener("click", () => selectRamen(ramen));
+    ramenContainer.appendChild(ramenItem);
+  });
+  if (ramens.length > 0) selectRamen(ramens[0]);
+}
+function selectRamen(ramen) {
+  detailName.textContent = ramen.name;
+  detailImage.src = ramen.image;
+  detailRating.textContent = `Rating: ${ramen.rating}/10`;
+  detailComment.textContent = `Comment: ${ramen.comment || "No comment"}`;
+  errorMessage.style.display = "none";
+}
