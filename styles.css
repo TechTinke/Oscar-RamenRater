@@ -170,7 +170,6 @@ footer {
   padding: 20px 0;
   color: #6c757d;
 }
-/* Responsive design */
 @media (max-width: 992px) {
   .ramen-grid {
     grid-template-columns: repeat(3, 1fr);
