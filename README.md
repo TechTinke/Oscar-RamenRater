@@ -27,7 +27,7 @@ Features and Behavior-Driven Development (BDD)
 Feature 1: View Ramen Dishes  
 Given: I am a user on the homepage.  
 When: I open the app.  
-Then: A list of available ramen dishes with their images, ratings, and descriptions is displayed.
+Then: A list of available ramen dishes with the image and details of the first Ramen Dish is displayed.
 
 ---
 
