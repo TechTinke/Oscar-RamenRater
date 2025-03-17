@@ -94,3 +94,17 @@ function selectRamen(ramen) {
   detailComment.textContent = `Comment: ${ramen.comment || "No comment"}`;
   errorMessage.style.display = "none";
 }
+
+// Update rating and comment
+updateBtn.addEventListener("click", () => {
+  const newRating = parseInt(newRatingInput.value);
+  if (isNaN(newRating) || newRating < 1 || newRating > 10) {
+    errorMessage.style.display = "block";
+    return;
+  }
+  errorMessage.style.display = "none";
+  detailRating.textContent = `Rating: ${newRating}/10`;
+  detailComment.textContent = `Comment: ${newCommentInput.value}`;
+});
+
+loadRamens();
