@@ -76,3 +76,12 @@ const ramens = [
     comment: "Nice seafood taste!",
   },
 ];
+function loadRamens() {
+ramenContainer.innerHTML = "";
+ramens.forEach((ramen) => {
+  const ramenItem = document.createElement("div");
+  ramenItem.classList.add("ramen-item");
+  ramenItem.innerHTML = `<img src="${ramen.image}" alt="${ramen.name}"><p>${ramen.name}</p>`;
+  ramenItem.addEventListener("click", () => selectRamen(ramen));
+  ramenContainer.appendChild(ramenItem);
+});
